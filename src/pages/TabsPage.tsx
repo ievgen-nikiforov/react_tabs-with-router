@@ -1,5 +1,5 @@
 import 'react-tabs/style/react-tabs.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 export const TabsPage = () => {
@@ -24,12 +24,13 @@ export const TabsPage = () => {
 
         <Tabs
           selectedIndex={selectedIndex}
+          selectedTabClassName="is-active"
           onSelect={index => navigate(`/tabs/${tabs[index].id}`)}
         >
-          <TabList>
+          <TabList className="tabs is-boxed">
             {tabs.map(tab => (
               <Tab key={tab.id} data-cy="Tab">
-                {tab.title}
+                <Link to={`/tabs/${tab.id}`}>{tab.title}</Link>
               </Tab>
             ))}
           </TabList>
