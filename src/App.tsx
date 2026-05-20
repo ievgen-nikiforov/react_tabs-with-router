@@ -22,7 +22,12 @@ export const App = () => {
                   'is-active': pathname === '/',
                 })}
               >
-                <Link className="navbar-item" to="/">
+                <Link
+                  className={classNames('navbar-item', {
+                    'is-active': pathname === '/',
+                  })}
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
@@ -31,7 +36,12 @@ export const App = () => {
                   'is-active': pathname.startsWith('/tabs'),
                 })}
               >
-                <Link className="navbar-item" to="/tabs">
+                <Link
+                  className={classNames('navbar-item', {
+                    'is-active': pathname.startsWith('/tabs'),
+                  })}
+                  to="/tabs"
+                >
                   Tabs
                 </Link>
               </li>
