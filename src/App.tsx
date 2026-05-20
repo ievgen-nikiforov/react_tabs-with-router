@@ -34,7 +34,7 @@ export const App = () => {
             <NavLink
               to="/tabs"
               className={classNames('navbar-item', {
-                'is-active': pathname === '/tabs',
+                'is-active': pathname.startsWith('/tabs'),
               })}
             >
               Tabs

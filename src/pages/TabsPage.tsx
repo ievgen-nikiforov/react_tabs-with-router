@@ -1,6 +1,6 @@
+import 'react-tabs/style/react-tabs.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 
 export const TabsPage = () => {
   const navigate = useNavigate();
