@@ -42,9 +42,9 @@ export const TabsPage = () => {
             </TabPanel>
           ))}
           {selectedIndex === -1 && (
-              <div className="block" data-cy="TabContent">
-                Please select a tab
-              </div>
+            <div className="block" data-cy="TabContent">
+              Please select a tab
+            </div>
           )}
         </Tabs>
       </div>
